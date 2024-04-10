@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strona kupna</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/purchaseScreen.css" />
+    <script defer src="./scripts/purchaseScreen.js"></script>
+  </head>
+  <body>
+    <div id="chosen_car"></div>
+    <div id="form">
+      <form>
+        <label for="first_name">First Name:</label><br />
+        <input type="text" id="first_name" name="first_name" /><br />
+        <label for="last_name">Last Name:</label><br />
+        <input type="text" id="last_name" name="last_name" /><br />
+      </form>
+    </div>
+    <div id="shipment_date"></div>
+    <div id="accessories">
+      <table>
+        <tr>
+          <th></th>
+          <th>Heated seats</th>
+          <th>3000 PLN</th>
+          <th><input type="checkbox" id="choose_seats" /></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Alloy rims</th>
+          <th>2000 PLN</th>
+          <th><input type="checkbox" id="choose_rims" /></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Premium mat</th>
+          <th>500 PLN</th>
+          <th><input type="checkbox" id="choose_mat" /></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Ambient lights</th>
+          <th>1000 PLN</th>
+          <th><input type="checkbox" id="choose_lights" /></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Chrome finnish</th>
+          <th>5000 PLN</th>
+          <th><input type="checkbox" id="choose_chrome" /></th>
+        </tr>
+      </table>
+
+      <div id="final_price">Final price:</div>
+      <div id="financing">
+        <input type="radio" id="leasing" name="financing" value="leasing" />
+        <label for="leasing">leasing</label><br />
+        <input type="radio" id="credit" name="financing" value="credit" />
+        <label for="credit">credit</label><br />
+        <input type="radio" id="cash" name="financing" value="cash" />
+        <label for="cash">cash</label><br />
+      </div>
+    </div>
+  </body>
+</html>

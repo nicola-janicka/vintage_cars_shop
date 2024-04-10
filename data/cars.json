@@ -1,0 +1,94 @@
+{
+  "cars": [
+    {
+      "id": 0,
+      "make": "Mercedes",
+      "model": "220 SEb Coupe W111",
+      "year": 1964,
+      "mileage": 128000,
+      "hp": 120,
+      "price": 149000,
+      "image": "./assets/cars/mercedes-220seb-1964.jpeg"
+    },
+    {
+      "id": 1,
+      "make": "Triumph",
+      "model": "TR6",
+      "year": 1971,
+      "mileage": 121000,
+      "hp": 104,
+      "price": 44000,
+      "image": "./assets/cars/triumphTR6_1971.jpeg"
+    },
+    {
+      "id": 2,
+      "make": "Volkswagen",
+      "model": "T2 Microbus",
+      "year": 1970,
+      "mileage": 80000,
+      "hp": 49,
+      "price": 179900,
+      "image": "./assets/cars/volkswagen-t2-microbus-1970.jpeg"
+    },
+    {
+      "id": 3,
+      "make": "Volvo",
+      "model": "144 Grand Luxe Automatic",
+      "year": 1973,
+      "mileage": 155000,
+      "hp": 124,
+      "price": 54000,
+      "image": "./assets/cars/volvo_grand_luxe_automatic_1973.jpeg"
+    },
+    {
+      "id": 4,
+      "make": "Porsche",
+      "model": "911",
+      "year": 1969,
+      "mileage": 147000,
+      "hp": 160,
+      "price": 275000,
+      "image": "./assets/cars/porsche_912_coupe_5speed_1969.webp"
+    },
+    {
+      "id": 5,
+      "make": "Ford",
+      "model": "Mustang",
+      "year": 1967,
+      "mileage": 50000,
+      "hp": 250,
+      "price": 220000,
+      "image": "./assets/cars/ford_mustang_1967.jpeg"
+    },
+    {
+      "id": 6,
+      "make": "Dodge",
+      "model": "Charger",
+      "year": 1970,
+      "mileage": 5000,
+      "hp": 500,
+      "price": 300000,
+      "image": "./assets/cars/dodge_charger_1970.webp"
+    },
+    {
+      "id": 7,
+      "make": "Chevrolet",
+      "model": "Chevelle SS",
+      "year": 1969,
+      "mileage": 666,
+      "hp": 239,
+      "price": 320000,
+      "image": "./assets/cars/chevrolet_chevelle.jpeg"
+    },
+    {
+      "id": 8,
+      "make": "BMW",
+      "model": "528i e12",
+      "year": 1977,
+      "mileage": 133421,
+      "hp": 177,
+      "price": 79000,
+      "image": "./assets/cars/bmw-528i-e12_1977.jpeg"
+    }
+  ]
+}
