@@ -12,46 +12,14 @@
     <div id="chosen_car"></div>
     <div id="form">
       <form>
-        <label for="first_name">First Name:</label><br />
-        <input type="text" id="first_name" name="first_name" /><br />
-        <label for="last_name">Last Name:</label><br />
-        <input type="text" id="last_name" name="last_name" /><br />
+        <label for="first_name">First name and last name:</label><br />
+        <input type="text" id="name" name="first_name" /><br />
       </form>
+      <p hidden id="incorrect_data">Incorrect data!</p>
     </div>
     <div id="shipment_date"></div>
-    <div id="accessories">
-      <table>
-        <tr>
-          <th></th>
-          <th>Heated seats</th>
-          <th>3000 PLN</th>
-          <th><input type="checkbox" id="choose_seats" /></th>
-        </tr>
-        <tr>
-          <th></th>
-          <th>Alloy rims</th>
-          <th>2000 PLN</th>
-          <th><input type="checkbox" id="choose_rims" /></th>
-        </tr>
-        <tr>
-          <th></th>
-          <th>Premium mat</th>
-          <th>500 PLN</th>
-          <th><input type="checkbox" id="choose_mat" /></th>
-        </tr>
-        <tr>
-          <th></th>
-          <th>Ambient lights</th>
-          <th>1000 PLN</th>
-          <th><input type="checkbox" id="choose_lights" /></th>
-        </tr>
-        <tr>
-          <th></th>
-          <th>Chrome finnish</th>
-          <th>5000 PLN</th>
-          <th><input type="checkbox" id="choose_chrome" /></th>
-        </tr>
-      </table>
+    <div>
+      <table id="accessories"></table>
 
       <div id="final_price">Final price:</div>
       <div id="financing">

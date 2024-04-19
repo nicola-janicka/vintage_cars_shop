@@ -1,0 +1,47 @@
+{
+  "accessories": [
+    {
+      "id": 0,
+      "name": "Heated seats",
+      "price": 3000
+    },
+    {
+      "id": 1,
+      "name": "Alloy rims",
+      "price": 2000
+    },
+    {
+      "id": 2,
+      "name": "Premium mat",
+      "price": 500
+    },
+    {
+      "id": 3,
+      "name": "Ambient lights",
+      "price": 1000
+    },
+    {
+      "id": 4,
+      "name": "Chrome finish",
+      "price": 5000
+    },
+
+    {
+      "id": 5,
+      "name": "Eco leather upholstery",
+      "price": 4000
+    },
+
+    {
+      "id": 6,
+      "name": "Sport package",
+      "price": 8000
+    },
+
+    {
+      "id": 7,
+      "name": "Audio system",
+      "price": 3000
+    }
+  ]
+}
