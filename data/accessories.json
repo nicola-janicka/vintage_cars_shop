@@ -3,45 +3,53 @@
     {
       "id": 0,
       "name": "Heated seats",
-      "price": 3000
+      "price": 3000,
+      "image": "./assets/accessories/heated_seats.jpeg"
     },
     {
       "id": 1,
       "name": "Alloy rims",
-      "price": 2000
+      "price": 2000,
+      "image": "./assets/accessories/alloy_rims.webp"
     },
     {
       "id": 2,
       "name": "Premium mat",
-      "price": 500
+      "price": 500,
+      "image": "./assets/accessories/premium_mat.jpeg"
     },
     {
       "id": 3,
       "name": "Ambient lights",
-      "price": 1000
+      "price": 1000,
+      "image": "./assets/accessories/ambient_lights.jpeg"
     },
     {
       "id": 4,
       "name": "Chrome finish",
-      "price": 5000
+      "price": 5000,
+      "image": "./assets/accessories/chrome_finish.jpeg"
     },
 
     {
       "id": 5,
       "name": "Eco leather upholstery",
-      "price": 4000
+      "price": 4000,
+      "image": "./assets/accessories/eco_leather_upholstery.webp"
     },
 
     {
       "id": 6,
       "name": "Sport package",
-      "price": 8000
+      "price": 8000,
+      "image": "./assets/accessories/sport_package.jpeg"
     },
 
     {
       "id": 7,
       "name": "Audio system",
-      "price": 3000
+      "price": 3000,
+      "image": "./assets/accessories/audio_system.jpeg"
     }
   ]
 }

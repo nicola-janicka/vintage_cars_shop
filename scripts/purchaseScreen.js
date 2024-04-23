@@ -1,6 +1,7 @@
 const $chosenCar = document.getElementById("chosen_car");
 const $finalPrice = document.getElementById("final_price");
 const $accessoriesTable = document.getElementById("accessories");
+const $carImg = document.getElementById("car_img");
 
 // funkcja do generowania divow z autami
 
@@ -16,13 +17,15 @@ function generateChosenCar() {
         if (currentCarID == car.id) {
           const chosenCarDiv = document.createElement("div");
           chosenCarDiv.innerHTML = `
-          <img src=${car.image}>
-          <h1>${car.make}</h1>
-           <h2>${car.model}</h2>
-           <h3>${car.price} PLN <h3>
-           <button onclick="goToMainScreen()">Go back</button>
-           <button onclick="finalPurchase()">Buy</button>`;
+          <h1 class="fahkwang-medium">${car.make}</h1>
+           <h4 class="fahkwang-medium">${car.model}</h4>
+           <h6 class="fahkwang-medium">Year: ${car.year}</h6>
+           <h6 class="fahkwang-medium">Mileage: ${car.mileage} km</h6>
+           <h6 class="fahkwang-medium">HP: ${car.hp}</h6>
+           <h4 class="fahkwang-medium">${car.price} PLN <h3> 
+           `;
           $chosenCar.appendChild(chosenCarDiv);
+          $carImg.innerHTML = `<img style="max-height: 200px" src=${car.image}></img>`;
           if (!localStorage.getItem("price")) {
             localStorage.setItem("price", car.price);
           }
@@ -49,9 +52,15 @@ function getAccessories(accessoriesIDs) {
         if (accessoriesIDs.includes(accessory.id)) {
           let accessoryTableRow = document.createElement("tr");
           accessoryTableRow.innerHTML = `
-          <th></th>
-          <th>${accessory.name}</th>
-          <th>${accessory.price} PLN</th>`;
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src=${accessory.image}>
+            
+          </th>
+       
+          <th class="pe-5">${accessory.name}</th>
+          <th class="text-end pe-1">${accessory.price} PLN</th>
+          `;
           let checkbox = document.createElement("input");
           checkbox.type = "checkbox";
           if (localStorage.getItem(`acc_${accessory.id}`) == "true") {
