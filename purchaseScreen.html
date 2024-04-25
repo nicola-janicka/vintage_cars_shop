@@ -16,8 +16,12 @@
     <!-- FONTS -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Romanesco&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Romanesco&display=swap");
     </style>
+    <!-- ICONS -->
+    <script
+      src="https://kit.fontawesome.com/1aa8d516c6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -27,55 +31,77 @@
         crossorigin="anonymous"
       ></script>
       <div class="row mb-4">
-        <div id="car_img" class="col-6"></div>
+        <div
+          id="car_img"
+          class="d-flex justify-content-center align-items-center col-6"
+        ></div>
         <div id="chosen_car" class="col-6 ps-3"></div>
       </div>
 
       <div class="row mb-5">
-        <div class="col-6"><table id="accessories"></table></div>
+        <div class="col-6"><div id="accessories"></div></div>
         <div class="col-6">
-          <div class="float-end">
-            <div>
-              <div id="financing">
-                <input
-                  type="radio"
-                  id="leasing"
-                  name="financing"
-                  value="leasing"
-                />
-                <label for="leasing">leasing</label><br />
-                <input
-                  type="radio"
-                  id="credit"
-                  name="financing"
-                  value="credit"
-                />
-                <label for="credit">credit</label><br />
-                <input type="radio" id="cash" name="financing" value="cash" />
-                <label for="cash">cash</label><br />
+          <form>
+            <div id="form">
+              <label for="first_name" class="form-label"
+                >First and last name:</label
+              ><br />
+              <input
+                type="text"
+                id="name"
+                name="first_name"
+                class="form-control"
+              />
+
+              <div hidden class="form-text text-danger" id="incorrect_data">
+                Incorrect data!
               </div>
             </div>
-            <div id="form">
-              <form>
-                <label for="first_name">First and last name:</label><br />
-                <input type="text" id="name" name="first_name" /><br />
-              </form>
-              <p hidden id="incorrect_data">Incorrect data!</p>
+            <label class="form-label mt-2">Choose financing option:</label>
+            <div hidden class="form-text text-danger" id="choose_option">
+              Choose an option!
             </div>
-            <div id="shipment_date"></div>
-            <div id="final_price" class="mb-5">Final price:</div>
+            <div id="financing" class="mb-2">
+              <input
+                type="radio"
+                id="leasing"
+                name="financing"
+                value="leasing"
+                class="form-check-input"
+              />
+              <label for="leasing" class="form-check-label">leasing</label
+              ><br />
+              <input
+                type="radio"
+                id="credit"
+                name="financing"
+                value="credit"
+                class="form-check-input"
+              />
+              <label for="credit" class="form-check-label">credit</label><br />
+              <input
+                type="radio"
+                id="cash"
+                name="financing"
+                value="cash"
+                class="form-check-input"
+              />
+              <label for="cash" class="form-check-label">cash</label><br />
+            </div>
 
-            <button
-              onclick="goToMainScreen()"
-              class="btn btn-outline-secondary"
-            >
-              Go back
-            </button>
+            <div id="shipment_date" class="mb-2"></div>
 
-            <button onclick="finalPurchase()" class="btn btn-outline-success">
-              Final purchase
-            </button>
-          </div>
+            <div id="final_price" class="mb-2 bg-success-subtle p-3">
+              Final price:
+            </div>
+          </form>
+          <button onclick="goToMainScreen()" class="btn btn-outline-secondary">
+            Go back
+          </button>
+
+          <button onclick="finalPurchase()" class="btn btn-outline-success">
+            Final purchase
+          </button>
         </div>
       </div>
     </div>

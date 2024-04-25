@@ -21,16 +21,23 @@
       crossorigin="anonymous"
     ></script>
     <div id="resume_div">
-      <div id="thank_you">
-        <h1>Thank you for your purchase!</h1>
-        <h3>Below you can find the details:</h3>
+      <div id="thank_you" class="text-center">
+        <h1 class="bg-success-subtle p-2">Thank you for your purchase!</h1>
+        <h4>Below you can find the details:</h4>
       </div>
       <div id="details">
-        <img id="car_image" />
-        <h1 id="car_make">Volvo</h1>
-        <h2 id="car_model">144 Grand Luxe Automatic</h2>
-        <h2 id="car_price">15 000 PLN</h2>
-        <h2 id="financing">leasing</h2>
+        <img
+          id="car_image"
+          style="max-height: 300px; max-width: auto"
+          class="mx-auto d-block img-fluid"
+        />
+        <div class="text-center">
+          <h2 id="car_make"></h2>
+          <h5 id="car_model"></h5>
+          <h4 id="car_price"></h4>
+          <h4 id="financing"></h4>
+          <h4 id="car_shipment"></h4>
+        </div>
       </div>
     </div>
   </body>

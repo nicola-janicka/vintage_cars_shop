@@ -8,14 +8,14 @@ function generateHTMLForCarCard(car) {
   return `
   <div class="card mb-3" style="max-width: 96vw;">
   <div class="row g-0">
-    <div class="col-md-4" >
-      <img src="${car.image}" class="img-fluid"  alt="...">
+    <div class="col-md-4 d-flex content-align-center">
+      <img src="${car.image}" class="img-fluid" alt="car" style="height: 195px; width: 300px;" >
     </div>
     <div class="col-md-4">
       <div class="card-body">
-        <h5 class="card-title fahkwang-medium">${car.make}</h5>
-        <p class="card-text fahkwang-medium">${car.model}</p>
-        <p class="card-text fahkwang-medium">
+        <h5 class="card-title ">${car.make}</h5>
+        <p class="card-text ">${car.model}</p>
+        <p class="card-text ">
           <small class="text-body-secondary">
             Production year: ${car.year}<br>
             Mileage: ${car.mileage}<br>
@@ -28,7 +28,7 @@ function generateHTMLForCarCard(car) {
     </div>
    
     <div class="col-md-4 align-self-end pe-2 pb-2">
-    <div class="float-end fahkwang-medium">
+    <div class="float-end ">
     <bold>${car.price}</bold> PLN
       <button class="btn btn-outline-success " onclick="goToPurchase(${car.id})">Buy</button>
     </div>

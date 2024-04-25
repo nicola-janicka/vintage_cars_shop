@@ -2,10 +2,9 @@ const $chosenCar = document.getElementById("chosen_car");
 const $finalPrice = document.getElementById("final_price");
 const $accessoriesTable = document.getElementById("accessories");
 const $carImg = document.getElementById("car_img");
-const $alert = document.getElementById("incorrect_data");
-const $alert_radio = document.getElementById("choose_option");
 
-// Get data for chosen car and create HTML for it
+// funkcja do generowania divow z autami
+
 function generateChosenCar() {
   fetch("./data/cars.json")
     .then((response) => response.json())
@@ -18,15 +17,15 @@ function generateChosenCar() {
         if (currentCarID == car.id) {
           const chosenCarDiv = document.createElement("div");
           chosenCarDiv.innerHTML = `
-          <h1 >${car.make}</h1>
-           <h4 >${car.model}</h4>
-           <h6 >Year: ${car.year}</h6>
-           <h6 >Mileage: ${car.mileage} km</h6>
-           <h6 >HP: ${car.hp}</h6>
-           <h4 >${car.price} PLN <h3> 
+          <h1 class="fahkwang-medium">${car.make}</h1>
+           <h4 class="fahkwang-medium">${car.model}</h4>
+           <h6 class="fahkwang-medium">Year: ${car.year}</h6>
+           <h6 class="fahkwang-medium">Mileage: ${car.mileage} km</h6>
+           <h6 class="fahkwang-medium">HP: ${car.hp}</h6>
+           <h4 class="fahkwang-medium">${car.price} PLN <h3> 
            `;
           $chosenCar.appendChild(chosenCarDiv);
-          $carImg.innerHTML = `<img class="img-fluid" style="max-height: 200px" src=${car.image}></img>`;
+          $carImg.innerHTML = `<img style="max-height: 200px" src=${car.image}></img>`;
           if (!localStorage.getItem("price")) {
             localStorage.setItem("price", car.price);
           }
@@ -43,7 +42,7 @@ function generateChosenCar() {
     });
 }
 
-// Get accesories and create HTML elements with them
+// pętla do wyciągania dedykowanych akcesoriów
 function getAccessories(accessoriesIDs) {
   fetch("./data/accessories.json")
     .then((response) => response.json())
@@ -51,14 +50,16 @@ function getAccessories(accessoriesIDs) {
       let accessories = response.accessories;
       accessories.forEach((accessory) => {
         if (accessoriesIDs.includes(accessory.id)) {
-          let accessoryTableRow = document.createElement("div");
-          accessoryTableRow.className = "row mb-2 p-1 border";
+          let accessoryTableRow = document.createElement("tr");
           accessoryTableRow.innerHTML = `
-          <div class="d-flex justify-content-start align-items-start col-2 col-sm-3">
-              <img  class="img-fluid mx-auto d-none d-sm-block" style="width: 50px; height: 50px; object-fit: fill;" src=${accessory.image}>    
-          </div>
-          <div class="d-flex justify-content-center align-items-center col-6 col-sm-5" style="font-size: 14px;">${accessory.name}</div>
-          <div class="d-flex justify-content-center align-items-center pe-1 col-2 " style="font-size: 12px;">${accessory.price} PLN</div>
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src=${accessory.image}>
+            
+          </th>
+       
+          <th class="pe-5">${accessory.name}</th>
+          <th class="text-end pe-1">${accessory.price} PLN</th>
           `;
           let checkbox = document.createElement("input");
           checkbox.type = "checkbox";
@@ -77,9 +78,8 @@ function getAccessories(accessoriesIDs) {
             $finalPrice.innerHTML = `Final price: ${newPrice} PLN`;
             localStorage.setItem("price", newPrice);
           });
-          let checkboxDiv = document.createElement("div");
-          checkboxDiv.className = "col-1 justify-content-center d-flex";
-          checkboxDiv.appendChild(checkbox);
+          let newTh = document.createElement("th");
+          newTh.appendChild(checkbox);
           accessoryTableRow.appendChild(newTh);
           $accessoriesTable.appendChild(accessoryTableRow);
         }
@@ -101,39 +101,41 @@ function getShipmentDate() {
   date.setDate(date.getDate() + 14);
 
   let $shipmentDiv = document.getElementById("shipment_date");
-  $shipmentDiv.innerHTML =
-    `<i class="fa-regular fa-calendar"></i> Shipment date: ` +
-    date.toLocaleDateString();
-  localStorage.setItem("shipmentDate", date.toLocaleDateString());
+  $shipmentDiv.innerText = `Shipment date: ` + date.toLocaleDateString();
 }
+
+//funkcja do sprawdzania danych z pola input "First name and last name"
 
 function validateName(declaredName) {
   let splittedName = declaredName.split(" ");
-  return splittedName.length === 2;
+  if (splittedName.length === 2) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
+// Funkcja do zakupu auta
+
 function finalPurchase() {
-  let validated = true;
+  let financing = document.querySelector(
+    'input[name="financing"]:checked'
+  ).value;
+  localStorage.setItem("financing", financing);
   let nameInput = document.getElementById("name");
-  let financing = document.querySelector('input[name="financing"]:checked');
-  console.log(financing);
-
-  if (!validateName(nameInput.value)) {
-    validated = false;
-    $alert.removeAttribute("hidden");
-  }
-
-  if (!financing) {
-    validated = false;
-    $alert_radio.removeAttribute("hidden");
-  }
-
-  if (validated) {
-    localStorage.setItem("financing", financing.value);
+  if (validateName(nameInput.value)) {
     goToResume();
+  } else {
+    document.getElementById("incorrect_data").removeAttribute("hidden");
   }
 }
 
 generateChosenCar();
 
 getShipmentDate();
+
+const accCheckboxes = document.querySelectorAll(".acc");
+
+console.log(accCheckboxes);
+
+accCheckboxes.forEach((checkbox) => {});

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/purchaseScreen.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona kupna</title>
+    <link rel="stylesheet" href="./Strona kupna_files/global.css">
+    <link rel="stylesheet" href="./Strona kupna_files/purchaseScreen.css">
+    <script defer="" src="./Strona kupna_files/purchaseScreen.js"></script>
+    <link href="./Strona kupna_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FONTS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Romanesco&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Romanesco&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script src="./Strona kupna_files/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <div class="row mb-4">
+        <div id="car_img" class="col-6"><img style="max-height: 200px" src="./Strona kupna_files/volvo_grand_luxe_automatic_1973.jpeg"></div>
+        <div id="chosen_car" class="col-6 ps-3"><div>
+          <h1 class="fahkwang-medium">Volvo</h1>
+           <h4 class="fahkwang-medium">144 Grand Luxe Automatic</h4>
+           <h6 class="fahkwang-medium">Year: 1973</h6>
+           <h6 class="fahkwang-medium">Mileage: 155000 km</h6>
+           <h6 class="fahkwang-medium">HP: 124</h6>
+           <h4 class="fahkwang-medium">54000 PLN </h4><h3> 
+           </h3></div></div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-6"><table id="accessories"><tr>
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src="./Strona kupna_files/heated_seats.jpeg">
+            
+          </th>
+       
+          <th class="pe-5">Heated seats</th>
+          <th class="text-end pe-1">3000 PLN</th>
+          <th><input type="checkbox"></th></tr><tr>
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src="./Strona kupna_files/alloy_rims.webp">
+            
+          </th>
+       
+          <th class="pe-5">Alloy rims</th>
+          <th class="text-end pe-1">2000 PLN</th>
+          <th><input type="checkbox"></th></tr><tr>
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src="./Strona kupna_files/premium_mat.jpeg">
+            
+          </th>
+       
+          <th class="pe-5">Premium mat</th>
+          <th class="text-end pe-1">500 PLN</th>
+          <th><input type="checkbox"></th></tr><tr>
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src="./Strona kupna_files/chrome_finish.jpeg">
+            
+          </th>
+       
+          <th class="pe-5">Chrome finish</th>
+          <th class="text-end pe-1">5000 PLN</th>
+          <th><input type="checkbox"></th></tr><tr>
+          <th>
+
+              <img class="img-thumbnail" style="width: 50px; height: 50px; object-fit: fill;" src="./Strona kupna_files/audio_system.jpeg">
+            
+          </th>
+       
+          <th class="pe-5">Audio system</th>
+          <th class="text-end pe-1">3000 PLN</th>
+          <th><input type="checkbox"></th></tr></table></div>
+        <div class="col-6">
+          <form>
+            <div id="form">
+              <label for="first_name" class="form-label">First and last name:</label><br>
+              <input type="text" id="name" name="first_name" class="form-control"><br>
+
+              <p hidden="" id="incorrect_data">Incorrect data!</p>
+            </div>
+            <div id="financing">
+              <input type="radio" id="leasing" name="financing" value="leasing">
+              <label for="leasing">leasing</label><br>
+              <input type="radio" id="credit" name="financing" value="credit">
+              <label for="credit">credit</label><br>
+              <input type="radio" id="cash" name="financing" value="cash">
+              <label for="cash">cash</label><br>
+            </div>
+          </form>
+          <div class="float-end">
+            <div></div>
+
+            <div id="shipment_date">Shipment date: 8.05.2024</div>
+            <div id="final_price" class="mb-5">Final price: 54000 PLN</div>
+
+            <button onclick="goToMainScreen()" class="btn btn-outline-secondary">
+              Go back
+            </button>
+
+            <button onclick="finalPurchase()" class="btn btn-outline-success">
+              Final purchase
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+  <footer class="bg-body-tertiary text-center">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+        <a data-mdb-ripple-init="" class="btn text-white btn-floating m-1" href="https://www.facebook.com/?locale=pl_PL" role="button"><i class="fab fa-facebook-f"></i><img src="./Strona kupna_files/facebook.png" width="20px" height="auto"></a>
+
+        <a data-mdb-ripple-init="" class="btn text-white btn-floating m-1" href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i>
+          <img src="./Strona kupna_files/Instagram_icon.png.webp" width="20px" height="auto">
+        </a>
+
+        <a data-mdb-ripple-init="" class="btn text-white btn-floating m-1" href="https://pl.linkedin.com/" role="button"><i class="fab fa-linkedin-in"></i><img src="./Strona kupna_files/LinkedIn_icon.svg.webp" width="20px" height="auto"></a>
+      </section>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05)">
+      © 2024 Copyright:
+      <a>Vintage cars</a>
+    </div>
+  </footer>
+
+</body></html>

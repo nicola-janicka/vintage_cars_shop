@@ -1,0 +1,78 @@
+.romanesco-header {
+  font-family: "Romanesco", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 500%;
+}
+
+.fahkwang-extralight {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.fahkwang-light {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fahkwang-regular {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fahkwang-medium {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fahkwang-semibold {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fahkwang-bold {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fahkwang-extralight-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.fahkwang-light-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.fahkwang-regular-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fahkwang-medium-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fahkwang-semibold-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fahkwang-bold-italic {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
