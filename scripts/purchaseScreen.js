@@ -80,7 +80,7 @@ function getAccessories(accessoriesIDs) {
           let checkboxDiv = document.createElement("div");
           checkboxDiv.className = "col-1 justify-content-center d-flex";
           checkboxDiv.appendChild(checkbox);
-          accessoryTableRow.appendChild(newTh);
+          accessoryTableRow.appendChild(checkboxDiv);
           $accessoriesTable.appendChild(accessoryTableRow);
         }
       });
